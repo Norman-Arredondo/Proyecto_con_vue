@@ -1,0 +1,25 @@
+.body-part {
+    height: 200px;
+    display: flex;
+}
+
+.color-box {
+    width: 200px;
+}
+
+#red-box {
+    background-color: red;
+}
+
+#blue-box {
+    background-color: blue;
+}
+
+#gray-box {
+    background-color: gray;
+}
+
+.prev-btn,
+.next-btn {
+    height: 100%;
+}
