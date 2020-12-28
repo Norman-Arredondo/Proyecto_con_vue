@@ -38,6 +38,8 @@ const PartSelector = {
             if(val == true) {
                 this.selectedPartIndex = Math.floor(Math.random() * (this.maxIndex - this.minIndex +1) )+ this.minIndex;
                 this.$emit('randomInvoked',true);
+                this.emitSelected();
+
             }
             
         }
@@ -55,7 +57,13 @@ const PartSelector = {
         selectNextPart() {
             this.selectedPartIndex = this.selectedPartIndex < this.maxIndex ? this.selectedPartIndex + 1 : this.minIndex;
 
+        },
+        emitSelected() {
+            this.$emit('partSelected', this.selectedPart);
         }
+    },
+    created() {
+        this.emitSelected();
     }
 
 }
