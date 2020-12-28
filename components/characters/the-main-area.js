@@ -183,6 +183,7 @@ const TheMainArea = {
             if(part.type == 'heads') {
                 this.selectedParts.head = part;
                 this.selectedCharId = part.id;
+                this.aboutCharacter();
 
             }
             if(part.type == "middles") {

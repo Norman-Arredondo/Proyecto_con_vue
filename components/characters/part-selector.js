@@ -52,11 +52,12 @@ const PartSelector = {
     methods: {
         selectPrevPart() {
             this.selectedPartIndex = this.selectedPartIndex > this.minIndex ? this.selectedPartIndex - 1 : this.maxIndex;
+            this.emitSelected();
         },
 
         selectNextPart() {
             this.selectedPartIndex = this.selectedPartIndex < this.maxIndex ? this.selectedPartIndex + 1 : this.minIndex;
-
+            this.emitSelected();
         },
         emitSelected() {
             this.$emit('partSelected', this.selectedPart);
